@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>YCBA Map - Second Floor</title>
+  <link rel="stylesheet" type="text/css" href="maps.css">
+</head>
+
+<body>
+<svg id="building" width="70" height="155">
+   <rect x="0" y="0" width="70" height="155" fill="grey"/>
+
+   <a xlink:href="index.html">
+      <rect x="5" y="5" width="60" height="20" fill="yellow"/>
+      <text x="11" y="19">Home</text>
+  </a>
+  <a xlink:href="4FLmaptags.html">
+      <rect x="5" y="30" width="60" height="20" fill="pink"/>
+      <text x="30" y="46">4</text>
+  </a>
+  <a xlink:href="3FLmaptags.html">
+      <rect x="5" y="55" width="60" height="20" fill="pink"/>
+      <text x="30" y="70">3</text>
+  </a>
+  <a xlink:href="2FLmaptags.html">
+      <rect x="5" y="80" width="60" height="20" fill="pink"/>
+      <text x="30" y="95">2</text>
+  </a>
+  <a xlink:href="1FLmaptags.html">
+      <rect x="5" y="105" width="60" height="20" fill="pink"/>
+      <text x="30" y="120">1</text>
+  </a>
+  <a xlink:href="report.html">
+      <rect x="5" y="130" width="60" height="20" fill="yellow"/>
+      <text x="11" y="145">Report</text>
+  </a>
+   Sorry, your browser does not support inline SVG.
+</svg> 
+<!--- This will make a pretty persistant box when you click -->
+<script type="text/javascript" src="jquery-1.12.3.js"></script>
+<script type="text/javascript">
+
+</script>
+
+<img id="middle" class="secondflmap" src="image002.jpg" width="720" height="360" alt="SecondFl" usemap="#secondflmap" align="left">
+
+
+   <body>
+   <h2><p id="demo">Welcome to the 2nd Floor</p></h2>
+   <div id="hits"></div>
+   <div id="result"></div>
+
+  </body>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="sparql.js"></script>
+    <script type="text/javascript">
+
+    $('img').click(function(){
+    $('.selected').removeClass('selected');
+    $(this).addClass('selected');
+    });
+
+function myFunction(str) {
+    document.getElementById("demo").innerHTML = "Artwork featured in " + str;
+    query("201", str); 
+}
+
+</script>
+
+<map name="secondflmap">
+  <area id='Bay02' href="#" shape="rect" coords="492,25,544,77" alt="Link" title="Bay 02" onclick="return myFunction(id)" >
+  <area id='Bay01' href="#" shape="rect" coords="492,77,544,130" alt="Bay01" title='Bay 01' onclick="return myFunction(id)">
+  <area id='Bay15' href="#" shape="polygon" coords="492,130, 544,130, 544,233, 492,233, 492,207, 440,207, 440,155, 492,155" alt="Bay15" title='Bay 15' onclick="return myFunction(id)">
+  <area id='Bay14' href="#" shape="rect" coords="492,233,544,285" alt="Bay14" title='Bay 14' onclick="return myFunction(id)">
+  
+  <area id='Bay04' href="#" shape="rect" coords="544,25,596,77" alt="Bay04" title='Bay 04' onclick="return myFunction(id)">
+  <area id='Bay03' href="#"shape="rect" coords="544,77,596,130" alt="Bay03" title='Bay 03' onclick="return myFunction(id)">
+  <area id='Bay13' href="#"shape="rect" coords="544,233,596,285" alt="Bay13" title='Bay 13' onclick="return myFunction(id)">
+    
+  <area id='Bay06' href="#" shape="rect" coords="596,25,647,77" alt="Bay06" title='Bay 06' onclick="return myFunction(id)"> 
+  <area id='Bay05' href="#" shape="rect" coords="596,77,647,130" alt="Bay05" title='Bay 05' onclick="return myFunction(id)"> 
+  <area id='Bay12' href="#" shape="rect" coords="596,233,647,285" alt="Bay12" title='Bay 12' onclick="return myFunction(id)">
+  
+  <area id='Bay07' href="#" shape="rect" coords="647,25,699,77" alt="Bay07" title='Bay 07' onclick="return myFunction(id)"> 
+  <area id='Bay08' href="#" shape="rect" coords="647,77,699,130" alt="Bay08"  title='Bay 08' onclick="return myFunction(id)">
+  <area id='Bay09' href="#" shape="rect" coords="647,130,699,182" alt="Bay09" title='Bay 09' onclick="return myFunction(id)">
+  <area id='Bay10' href="#" shape="rect" coords="647,182,699,234" alt="Bay10" title='Bay 10' onclick="return myFunction(id)">
+  <area id='Bay11' href="#" shape="rect" coords="647,234,699,285" alt="Bay11" title='Bay 11' onclick="return myFunction(id)">
+  <area id='up' href="3FLmaptags.html" shape="rect" coords="440,128,466,154" alt="to 3rd fl" title="to 3rd fl">
+  <area id='down' href="1FLmaptags.html" shape="rect" coords="466,128,491,154" alt="to 1st fl" title="to 1st fl">
+</map>
+<h2 id="title"></h2>
+<h3 id="artist"></h3>
+<img id="placeholder" style="display: block;" src="photo.jpg", width='100' height='100'>
+</body>
+</html>

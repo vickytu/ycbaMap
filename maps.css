@@ -1,0 +1,42 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#middle {
+    padding-left: 0px;
+}
+
+#map {
+    height: 50%;
+    width: 75%;
+}
+
+#floating-panel {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    z-index: 5;
+    background-color: #fff;
+    padding: 5px;
+    border: 1px solid #999;
+    text-align: center;
+    font-family: 'Roboto','sans-serif';
+    line-height: 30px;
+    padding-left: 10px;
+}
+
+#building {
+    float: left;
+}
+
+table, th, td {
+    border: 1px;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+}
+
+

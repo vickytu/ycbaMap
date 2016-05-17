@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>YCBA Map - Fourth Floor</title>
+  <link rel="stylesheet" type="text/css" href="maps.css">
+</head>
+
+<body>
+<svg id="building" width="70" height="155">
+   <rect x="0" y="0" width="70" height="155" fill="grey"/>
+
+   <a xlink:href="index.html">
+      <rect x="5" y="5" width="60" height="20" fill="yellow"/>
+      <text x="11" y="19">Home</text>
+  </a>
+  <a xlink:href="4FLmaptags.html">
+      <rect x="5" y="30" width="60" height="20" fill="pink"/>
+      <text x="30" y="46">4</text>
+  </a>
+  <a xlink:href="3FLmaptags.html">
+      <rect x="5" y="55" width="60" height="20" fill="pink"/>
+      <text x="30" y="70">3</text>
+  </a>
+  <a xlink:href="2FLmaptags.html">
+      <rect x="5" y="80" width="60" height="20" fill="pink"/>
+      <text x="30" y="95">2</text>
+  </a>
+  <a xlink:href="1FLmaptags.html">
+      <rect x="5" y="105" width="60" height="20" fill="pink"/>
+      <text x="30" y="120">1</text>
+  </a>
+  <a xlink:href="report.html">
+      <rect x="5" y="130" width="60" height="20" fill="yellow"/>
+      <text x="11" y="145">Report</text>
+  </a>
+   Sorry, your browser does not support inline SVG.
+</svg> 
+
+<img id="middle" style="display: block;" src="image001edit.jpg" width="720" height="360" alt="FourthFl" usemap="#fourthflmap" align="left"> 
+
+<body>
+   <h2><p id="demo">Welcome to the 4th Floor</p></h2>
+   <div id="hits"></div>
+   <div id="result" style="display: inline;"></div>
+
+  </body>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="sparql.js"></script>
+    <script type="text/javascript">
+
+
+    $('img').click(function(){
+    $('.selected').removeClass('selected');
+    $(this).addClass('selected');
+});
+
+function myFunction(str) {
+    document.getElementById("demo").innerHTML = "Artwork featured in " + str;
+    query("401", str); 
+}
+
+</script>
+
+<map name="fourthflmap">
+  <area id='Bay10' href="#" shape="rect" coords="233,78,285,130" alt="Bay10" title="Bay 10" onclick="return myFunction(id)">
+  <area id='Bay09' href="#" shape="rect" coords="233,130,285,182" alt="Bay09" title="Bay 09" onclick="return myFunction(id)">
+  <area id='Bay08' href="#" shape="rect" coords="233,182,285,234" alt="Bay08" title="Bay 08" onclick="return myFunction(id)">
+  <area id='Bay07' href="#" shape="rect" coords="233,233,285,285" alt="Bay07" title="Bay 07" onclick="return myFunction(id)">
+  <area id='LG1' href="#" shape="rect" coords="233,285,285,337" alt="LG1" title="LG 1" onclick="return myFunction(id)">
+  
+  <area id='Bay11' href="#" shape="rect" coords="284,78,336,130" alt="Bay11" title="Bay 11" onclick="return myFunction(id)">
+  <area id='Bay06' href="#" shape="rect" coords="285,233,337,285" alt="Bay06" title="Bay 06" onclick="return myFunction(id)">
+  <area id='LG2' href="#" shape="rect" coords="285,285,336,337" alt="LG2" title="LG 2" onclick="return myFunction(id)">
+  
+  <area id='Bay12' href="#" shape="rect" coords="337,79,388,129" alt="Bay12" title="Bay 12" onclick="return myFunction(id)">
+  <area id='Bay05' href="#" shape="rect" coords="335,233,388,286" alt="Bay05" title="Bay 05" onclick="return myFunction(id)">
+  <area id='LG3' href="#" shape="rect" coords="336,286,388,337" alt="LG3" title="LG 3" onclick="return myFunction(id)">
+  
+  <area id='Bay13' href="#" shape="rect" coords="388,78,440,129" alt="Bay13" title="Bay 13" onclick="return myFunction(id)">
+  <area id='Bay04' href="#" shape="rect" coords="387,234,440,286" alt="Bay04" title="Bay 04" onclick="return myFunction(id)">
+  <area id='LG4' href="#" shape="rect" coords="387,286,440,337" alt="LG4" title="LG 4" onclick="return myFunction(id)">
+  
+  <area id='Bay14' href="#"  shape="rect" coords="440,26,492,78" alt="Bay14" title="Bay 14" onclick="return myFunction(id)">
+  <area id='Bay15' href="#" shape="rect" coords="440,78,492,130" alt="Bay15" title="Bay 15" onclick="return myFunction(id)">
+  <area id='Bay03' href="#" shape="rect" coords="440,234,492,286" alt="Bay03" title="Bay 03" onclick="return myFunction(id)">
+  <area id='Bay15' href="#" shape="rect" coords="440,286,492,337" alt="Bay15" title="Bay 15" onclick="return myFunction(id)">
+  
+  <area id='Bay16' href="#" shape="rect" coords="492,26,543,77" alt="Bay16" title="Bay 16" onclick="return myFunction(id)">
+  <area id='Bay17' href="#" shape="rect" coords="492,77,544,129" alt="Bay17" title="Bay 17" onclick="return myFunction(id)">
+  <area id='Bay01' href="#" shape="polygon" coords="492,128, 543,128, 543,234,492,233,492,207,439,207,440,155,492,155" alt="Bay01" title="Bay 01" onclick="return myFunction(id)">
+  <area id='Bay02' href="#" shape="rect" coords="492,233,544,286" alt="Bay02" title="Ba y02" onclick="return myFunction(id)">
+  <area id='Bay002' href="#" shape="rect" coords="492,286,544,338" alt="CS1" title="CS 1" onclick="return myFunction(id)">
+  
+  <area id='Bay18' href="#" shape="rect" coords="543,26,594,77" alt="Bay18" title="Bay 18" onclick="return myFunction(id)">
+  <area id='Bay19' href="#" shape="rect" coords="543,77,595,130" alt="Bay19" title="Bay 19" onclick="return myFunction(id)">
+  <area id='Bay28' href="#" shape="rect" coords="543,233,594,286" alt="Bay28" title="Bay2 8" onclick="return myFunction(id)">
+  <area id='CS2' href="#" shape="rect" coords="543,286,594,336" alt="CS2" title="CS 2" onclick="return myFunction(id)">
+  
+  <area id='Bay20' href="#" shape="rect" coords="594,26,647,77" alt="Bay20" title="Bay 20" onclick="return myFunction(id)">
+  <area id='Bay21' href="#" shape="rect" coords="594,77,647,129" alt="Bay21" title="Bay 21" onclick="return myFunction(id)">
+  <area id='Bay27' href="#" shape="rect" coords="594,233,647,286" alt="Bay27" title="Bay 27" onclick="return myFunction(id)">
+  
+  <area id='Bay22' href="#" shape="rect" coords="647,26,698,77" alt="Bay22" title="Bay 22" onclick="return myFunction(id)">
+  <area id='Bay23' href="#" shape="rect" coords="647,77,698,130" alt="Bay23" title="Bay 23" onclick="return myFunction(id)">
+  <area id='Bay24' href="#" shape="rect" coords="647,130,699,182" alt="Bay24" title="Bay 24" onclick="return myFunction(id)"> 
+  <area id='Bay25' href="#" shape="rect" coords="647,182,699,234" alt="Bay25" title="Bay 25" onclick="return myFunction(id)">
+  <area id='Bay26' href="#" shape="rect" coords="647,234,699,286" alt="Bay26" title="Bay 26" onclick="return myFunction(id)"> 
+  <area id='up' href="index.html" shape="rect" coords="440,128,466,154" alt="to Menu" title="to Menu">
+  <area id='down' href="3FLmaptags.html" shape="rect" coords="466,128,491,154" alt="to 3rd fl" title="to 3rd fl">
+</map>
+<h2 id="title"></h2>
+<h3 id="artist"></h3>
+<img id="placeholder" style="display: block;" src="photo.jpg", width='100' height='100'>
+</body>
+</html>
